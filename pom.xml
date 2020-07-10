@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.ssstm</groupId>
 	<artifactId>virtualclock</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>tmdemo</name>
 	<description>Virtual Clock Demo project for Spring Boot</description>
 
