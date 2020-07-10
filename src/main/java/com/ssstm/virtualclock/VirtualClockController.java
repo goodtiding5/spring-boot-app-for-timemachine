@@ -20,7 +20,7 @@ public class VirtualClockController {
 
     private final AtomicLong counter = new AtomicLong();
     private final Calendar calendar = Calendar.getInstance();
-    private final DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss Z", Locale.getDefault());
+    private final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z", Locale.getDefault());
     private final String username = System.getProperty("user.name");
     private final String hostname = fetchHostname();
     private final long pid = fetchPid();
