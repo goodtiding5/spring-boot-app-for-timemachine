@@ -1,0 +1,6 @@
+---
+applications:
+  - name: tmdemospring
+    buildpacks:
+      - java_buildpack
+    path: target/tmdemo-0.0.2-SNAPSHOT.jar
