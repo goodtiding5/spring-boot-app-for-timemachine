@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Calendar;
 import java.util.Locale;
 import java.net.InetAddress;
@@ -19,7 +20,6 @@ import java.lang.management.ManagementFactory;
 public class VirtualClockController {
 
     private final AtomicLong counter = new AtomicLong();
-    private final Calendar calendar = Calendar.getInstance();
     private final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z", Locale.getDefault());
     private final String username = System.getProperty("user.name");
     private final String hostname = fetchHostname();
@@ -28,10 +28,8 @@ public class VirtualClockController {
     @GetMapping("/tmdemo/gettime")
     @ResponseBody
     public VirtualClock getCurrentTime() {
-        calendar.setTimeInMillis(System.currentTimeMillis());
-
         return new VirtualClock(counter.incrementAndGet(), pid, username, hostname,
-                dateFormat.format(calendar.getTime()));
+				dateFormat.format(new Date()));
     }
 
     private String fetchHostname() {
