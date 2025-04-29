@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ssstm</groupId>
-	<artifactId>tmdemo</artifactId>
+	<artifactId>virtualclock</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
-	<name>tmdemo</name>
+	<name>virtualclock</name>
 	<description>Virtual Clock Demo project for Spring Boot</description>
 
 	<properties>
